@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= yield(:title) %> | Brs07</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= yield(:title) %> | Brs07</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= favicon_link_tag "home.ico" %>
+  </head>
 
-<%= yield %>
+  <body>
+    <header><%= render 'layouts/header' %></header>
+    <main role="main">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </main>
+    <footer><%= render 'layouts/footer' %></footer>
+  </body>
 
-</body>
 </html>

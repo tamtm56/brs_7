@@ -13,6 +13,7 @@ group :development, :test do
   gem 'spring'
 end
 gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
 gem 'devise'
 group :development do
   gem 'better_errors'
