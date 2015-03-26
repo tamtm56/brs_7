@@ -80,3 +80,10 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  width: 70px;
+  height: auto;
+}
