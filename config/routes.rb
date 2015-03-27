@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
 
-  get 'books/index'
+  #get 'books/index'
 
   root "static_pages#home" 
   get "help"    => "static_pages#help"
@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
   resources :books
+  resources :categories
 end

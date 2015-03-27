@@ -1,0 +1,8 @@
+<% provide :title, "All Categories" %>
+<h1>All Categories</h1>
+<ul class="categories">
+  <% @categories.each do |category| %>
+    <li><%= category.name %></li>
+  <% end %>
+</ul>
+<%= will_paginate %>
