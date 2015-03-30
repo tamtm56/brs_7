@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'will_paginate'
+gem 'pdf-reader'
 gem 'bootstrap-will_paginate'
 group :development, :test do
   gem 'byebug'

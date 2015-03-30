@@ -1,19 +1,29 @@
-<div class="row" style="padding: 20px;">
-    <div class="col-md-4">
-        <h1><%= @book.name %></h1><br>
-        by <%= @book.author %><br>
-        About the book :<br>
-        <h4><%= @book.desc %></h4>
+<div style="padding: 20px;">
+  <ul class="nav nav-tabs" id="myTab">
+    <li><a data-toggle="tab" href="#info">Info Book</a></li>
+    <li><a data-toggle="tab" href="#reader">Reade</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="info" class="tab-pane fade in active">
+        <div class="row" >
+          <div class="col-md-4">
+            <h1><%= @book.name %></h1><br>by <%= @book.author %><br>
+            About the book :<br><h4><%= @book.desc %></h4><br>
+            <%= link_to 'ADD LIBRARY', "#", class:"btn btn-warning" %>
+          </div>
+          <div class="col-md-4">
+            <%= image_tag(@book.image, alt: @book.name, class: "image_info-book") %>
+          </div>
+      </div>
     </div>
-    <div class="col-md-4">
-        <%= image_tag(@book.image, alt: @book.name, class: "image_info-book") %>
+    <div id="reader" class="tab-pane fade" style="height: 500px;overflow: scroll;">
+      <p><%= read_book @book %></p>
     </div>
-</div>
-<div class="row">
-  <div class="col-md-2 col-md-offset-4">
-    <%= link_to 'START READING', "#", class:"btn btn-warning" %>
-  </div>
-  <div class="col-md-2">
-    <%= link_to 'ADD LIBRARY', "#", class:"btn btn-warning" %>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){ 
+    $("#myTab li:eq(0) a").tab('show');
+  });
+</script>
