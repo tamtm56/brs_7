@@ -1,7 +1,7 @@
 25.times do |n|
   title = "Tile-#{n+1}";
   name  = "Book-#{n+1}";
-  desc = "This is book-#{n+1}";
+  desc = Faker::Lorem.paragraphs(1);
   author = "Author-#{n+1}";
   image = "default.jpeg"
   link = "This book approaches learning C++ from the unique and fun perspective of games.";
@@ -13,3 +13,4 @@ end
   name = Faker::Lorem.sentence(1)
   Category.create!(name:name);
 end
+
